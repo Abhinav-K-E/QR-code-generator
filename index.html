@@ -15,7 +15,7 @@
     
     <div class="wrapper">
         <!--Main content-->
-        <div class="main">
+        <!-- <div class="main">
 
             <h1 class="head">
                 QR Code Generator
@@ -24,6 +24,39 @@
             <img src="" alt="" id="qr">
             <button onclick="generate()" id="btn">Generate QR</button>
 
+        </div> -->
+        <div class="left-grid">
+            <div class="head">
+                Free custom QR
+                <span>code generator</span>
+            </div>
+            <div class="txt">
+                Make a QR code for free that you can use in your branding, marketing, <br>and more to easily direct customers to your website.
+            </div>
+            <div class="box">
+                <input type="text" id="inputs">
+
+                <button id="btn" onclick="generate()">
+                    Generate
+                </button>
+            </div>
+        </div>
+        <div class="right-grid">
+            <img src="./qr2.png" alt="" id="qr" width="250px" height="250px">
+            
+            <!-- <div class="group">
+                <div class="link" id="col-1" style="background-color: #f00;" onclick="change()">
+                
+                </div>
+                <div class="link" id="col-1" style="background-color: #556B2F;" onclick="change1()">
+                
+                </div>
+                <div class="link" id="col-1" style="background-color: #0000ff;" onclick="change2()">
+                
+                </div>
+            </div> -->
+            
+            
         </div>
 
     </div>
@@ -48,13 +81,24 @@
 
         function generate(){
             if(inputs.value.length > 0){
-                qr.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+inputs.value;
-            
+                qr.src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="+inputs.value;
             }
             else{
                 alert("Please Enter Your Url");
             } 
         }
+
+        //to chage color
+
+        // function change(){
+        //     qr.src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&color=f00&data="+inputs.value;
+        // }
+        // function change1(){
+        //     qr.src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&color=556B2F&data="+inputs.value;
+        // }
+        // function change2(){
+        //     qr.src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&color=0000ff&data="+inputs.value;
+        // }
 
         // THE END
     </script>
